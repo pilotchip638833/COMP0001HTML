@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Coin Flip</title>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <h1>Coin Flip</h1>
+  <button onclick="flipCoin()">Flip!</button>
+  <div id="result"></div>
+  <script>
+    function flipCoin() {
+      const resultElement = document.getElementById("result");
+      const randomNumber = Math.floor(Math.random() * 2); // 0 or 1
+      let result = "";
+      if (randomNumber === 0) {
+        result = "Heads";
+      } else {
+        result = "Tails";
+      }
+      resultElement.textContent = "The coin landed on: " + result;
+    }
+  </script>
 </body>
-
 </html>
